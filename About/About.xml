@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>[1.0] Combat Extended: Shields</name>
+	<author>N7Huntsman</author>
+	<targetVersion>1.0.2059</targetVersion>
+	<description>Version: 1.0.0
+  
+Additional types of shields from a variety of eras and cultures.
+
+Must be loaded after the Combat Extended mod.
+</description>
+</ModMetaData>
