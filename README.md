@@ -1,4 +1,7 @@
 # CombatExtendedShields
+
+Updated 12/9/2018 for [1.0]  
+
 Additional types of shields from a variety of eras. Designed by different cultures for different roles, they allow further specialization of colonists equipped with shields depending upon their role in combat and duty around the colony.
 
 ---
