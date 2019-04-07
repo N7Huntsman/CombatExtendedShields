@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Shield Base -->
+  <ThingDef ParentName="ArmorMakeableBase" Name="ShieldBase_Plus" Abstract="true">
+    <thingClass>CombatExtended.Apparel_Shield</thingClass>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>	
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>LeftArm</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <storedConceptLearnOpportunity>CE_Shields</storedConceptLearnOpportunity>
+  </ThingDef>
+
+    <!-- Nguni Shield -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_NguniShield</defName>
+    <label>scudo di nguni</label>
+    <description>Uno scudo leggero fatto di pelle e legno, diventato famoso grazie a Zulu. Anche se molto sottile, può bloccare proiettili semplici ed è anche molto utile nel combattimento ravvicinato.</description>
+    <techLevel>Neolithic</techLevel> 
+    <graphicData>
+      <texPath>Nguni_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <ArmorRating_Blunt>0.13</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <Mass>4</Mass>
+      <Bulk>6</Bulk>
+      <WornBulk>4</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.05</ReloadSpeed>
+      <MeleeHitChance>-0.8</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.20</Suppressability>
+      <MeleeCritChance>-0.02</MeleeCritChance>
+      <MeleeParryChance>0.75</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>TribalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+    <!-- Wicker Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_WickerShield</defName>
+    <label>scudo di vimini</label>
+    <description>Uno scudo leggere fatto di vimini, usato una volta dall'infanteria dell'antico impero Persiano. Anche se molto efficace contro le frecce e altri tipi di proiettili, non e abastanza robusto per fermare un attacco di una lancia o spada.</description>
+    <graphicData>
+      <texPath>Wicker_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass> 
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+    <costStuffCount>60</costStuffCount>
+    <techLevel>Neolithic</techLevel>	
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.17</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <Mass>5</Mass>
+      <Bulk>7</Bulk>
+      <WornBulk>5</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.09</MeleeCritChance>
+      <MeleeParryChance>0.70</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>TribalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>   
+ 
+    <!-- Aspis (Greek Shield) -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Aspis</defName>
+    <label>aspis</label>
+    <description>Uno scudo fatto di legna è spesso ricoperto con uno strato di bronzo o un'altro metallo.</description>
+    <techLevel>Medieval</techLevel> 
+    <graphicData>
+      <texPath>Aspis_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Steel>5</Steel>	  
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>9400</WorkToMake>
+      <MaxHitPoints>135</MaxHitPoints>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>7.6</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+ 
+    <!-- Scutum (Roman Shield) -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Scutum</defName>
+    <label>scutum</label>
+    <description>Uno scudo molto pesante in stile Romano creato per proteggere il possessore contro attacchi corpo a corpo e dai proiettili. Offre una buona protezione, ma per via del suo peso si è costretti ad utilizzare due mani per portarlo.</description>
+    <techLevel>Medieval</techLevel> 
+    <graphicData>
+      <texPath>Scutum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Steel>10</Steel>	  
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.23</ArmorRating_Sharp>
+      <Mass>7</Mass>
+      <Bulk>8</Bulk>
+      <WornBulk>6</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+
+    <!-- Norse Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_NordShield</defName>
+    <label>scudo norvegese</label>
+    <description>Uno scudo pesante in stile Norvegese, una volta veniva usato dai vichinghi nelle battaglie dell'Europa dell'Est. Creato per proteggere il possessore nel combattimento corpo a corpo e contro i proiettili nemici. Fatto di legname molto spesso e ferro, e abbastanza robusto.</description>
+    <techLevel>Medieval</techLevel> 
+    <graphicData>
+      <texPath>Nordic_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>	
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>8.5</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>7</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+    <!-- Kite Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_KiteShield</defName>
+    <label>scudo di kite</label>
+    <description>Uno scudo pesante che copre fino alle gambe reso popolare dai Norrmanni. Fatto di legno molto spesso, e stato creato per proteggere il possessore nel combattimento corpo a corpo e dai proiettili. Offre una buona protezione, ma restringe il possessore nell'uso delle armi a due mani.</description>
+    <techLevel>Medieval</techLevel> 
+    <graphicData>
+      <texPath>Kite_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>9</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>PaviseShield</li>
+        <li>HeaterShield</li>	
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+    <!-- Crusader Kite Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_CrusaderShield</defName>
+    <label>scudo dei crociati</label>
+    <description>Uno scudo molto pesante che copre fino alle gambe reso popolare dai Normanni, con al centro il simbolo dei Crociati. Fatto di un legno molto spesso, e stato creato per proteggere il possessore nel combattimento corpo a corpo e dai proiettili. Offre una buona protezione, ma restringe il possessore nell'uso delle armi a due mani.</description>
+    <techLevel>Medieval</techLevel> 
+    <graphicData>
+      <texPath>Crusader_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <costList>
+      <WoodLog>70</WoodLog>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>	
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>9</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>PaviseShield</li>
+        <li>HeaterShield</li>		
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+
+    <!-- Buckler Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Buckler</defName>
+    <label>buckler</label>
+	<description>Uno scudo di metallo motlo piccolo, di solito abbinato ad una leggera arma a distanza ravvicina. Molto piccolo per garantire una protezione significante dai proiettili. Il buckler e stato creato per bloccare le armi nemici a distanza ravvicinata.</description>
+	<techLevel>Medieval</techLevel> 
+    <graphicData>
+      <texPath>Buckler_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+	<costStuffCount>50</costStuffCount>
+	<stuffCategories>
+		  <li>Steeled</li>
+	</stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>	
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>5</Mass>
+      <Bulk>4</Bulk>
+      <WornBulk>4</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-0.6</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.15</Suppressability>
+      <MeleeCritChance>-0.02</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+  
+    <!-- Riot Shield -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_RiotShield</defName>
+    <label>scudo anti-sommossa</label>
+    <description>Un leggero scudo metallico creato per proteggere il possessore contro oggetti da lancio e attacchi a distanza ravvicinata, ma non è abbastanza spesso per bloccare un'attacco diretto d'arma da fuoco. Lo scudo copre quasi tutto il corpo ma costringre il possessore ad usare solo armi ad una mano.</description>
+    <techLevel>Industrial</techLevel> 
+    <graphicData>
+      <texPath>Riot_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Steeled</li>
+    </stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Machining</researchPrerequisite>		
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.21</ArmorRating_Sharp>
+      <Mass>7</Mass>
+      <Bulk>11</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.2</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.25</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.2</AimingAccuracy>
+      <Suppressability>-0.15</Suppressability>
+      <MeleeCritChance>-0.2</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>OutlanderShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>FullHead</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+  
+	<!-- Assault Shield -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_AssaultShield</defName>
+    <label>scudo d'assalto</label>
+    <description>Uno scudo d'assalto avanzato con dei sensori integrati per assistere il combattente. Piccolo e motlo piu leggero di uno scudo balistico, e stato creato per proteggere il combattente dalle armi a fuoco. Garantendo un maggiore controllo ed il peso ridotto, e molto meno ingombrante di altri scudi al momento disponibili.</description>
+    <techLevel>Industrial</techLevel> 
+    <graphicData>
+      <texPath>Assault_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>64</costStuffCount>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>		
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>	
+    <stuffCategories>
+      <li>Steeled</li>
+    </stuffCategories>	  
+    <statBases>
+      <WorkToMake>16000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <Mass>12</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.05</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.25</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.15</AimingAccuracy>
+      <Suppressability>-0.45</Suppressability>
+      <MeleeCritChance>-0.2</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>OutlanderShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>  
+  
+</Defs>
+
+
