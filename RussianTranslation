@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Shield Base -->
+  <ThingDef ParentName="ArmorMakeableBase" Name="ShieldBase_Plus" Abstract="true">
+    <thingClass>CombatExtended.Apparel_Shield</thingClass>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>	
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>LeftArm</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <storedConceptLearnOpportunity>CE_Shields</storedConceptLearnOpportunity>
+  </ThingDef>
+
+    <!-- Nguni Shield -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_NguniShield</defName>
+    <label>щит нгуни</label>
+    <description>Лёгкий щит из кожи и дерева, известен благодаря зулусам. Несмотря на то, что щит довольно тонкий, способен отразить примитивные снаряды, также полезен в ближнем бою.</description>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Nguni_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+    </graphicData>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <ArmorRating_Blunt>0.13</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <Mass>4</Mass>
+      <Bulk>6</Bulk>
+      <WornBulk>4</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.05</ReloadSpeed>
+      <MeleeHitChance>-0.8</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.20</Suppressability>
+      <MeleeCritChance>-0.02</MeleeCritChance>
+      <MeleeParryChance>0.75</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>TribalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+    <!-- Wicker Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_WickerShield</defName>
+    <label>плетёный щит</label>
+    <description>Лёгкий плетёный щит, бывший на вооружении воинов древней Персидской империи. Эффективен против стрел и прочих снарядов, но недостаточно прочен, чтобы остановить удар копьём или мечом.</description>
+    <graphicData>
+      <texPath>Wicker_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+    <costStuffCount>60</costStuffCount>
+    <techLevel>Neolithic</techLevel>	
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.17</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <Mass>5</Mass>
+      <Bulk>7</Bulk>
+      <WornBulk>5</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.09</MeleeCritChance>
+      <MeleeParryChance>0.70</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>TribalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>   
+ 
+    <!-- Aspis (Greek Shield) -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Aspis</defName>
+    <label>аспис</label>
+    <description>Выпуклый деревянный щит, обычно покрытый тонким слоем бронзы или другого металла.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Aspis_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Steel>5</Steel>	  
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>9400</WorkToMake>
+      <MaxHitPoints>135</MaxHitPoints>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>7.6</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+ 
+    <!-- Scutum (Roman Shield) -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Scutum</defName>
+    <label>скутум</label>
+    <description>Тяжёлый римский щит, предназначен для защиты владельца от снарядов и холодного оружия. Хорошо прикрывает, но ограничивает использование двуручного оружия.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Scutum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Steel>10</Steel>	  
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.23</ArmorRating_Sharp>
+      <Mass>7</Mass>
+      <Bulk>8</Bulk>
+      <WornBulk>6</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+
+    <!-- Norse Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_NordShield</defName>
+    <label>скандинавский щит</label>
+    <description>Тяжёлый скандинавский щит, широко известен благодаря викингам, совершавшим набеги на Западную Европу с этим щитом наперевес. Предназначен для защиты владельца от снарядов и холодного оружия. Сделан из толстого слоя дерева с металлической окантовкой, это довольно прочный щит.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Nordic_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>	
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>8.5</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>7</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  
+    <!-- Kite Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_KiteShield</defName>
+    <label>каплевидный щит</label>
+    <description>Тяжёлый щит, прикрывающий ноги, получил распространение благодаря норманнам. Сделан из толстого слоя дерева, предназначен для защиты владельца от снарядов и холодного оружия. Хорошо прикрывает, но ограничивает использование двуручного оружия.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Kite_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>9</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>PaviseShield</li>
+        <li>HeaterShield</li>	
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+    <!-- Crusader Kite Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_CrusaderShield</defName>
+    <label>каплевидный щит крестоносца</label>
+    <description>Тяжёлый щит, прикрывающий ноги, получивший распространение благодаря норманнам. Сделан из толстого слоя дерева, предназначен для защиты владельца от снарядов и холодного оружия. Хорошо прикрывает, но ограничивает использование двуручного оружия.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Crusader_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <costList>
+      <WoodLog>70</WoodLog>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>	
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>9</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>PaviseShield</li>
+        <li>HeaterShield</li>		
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+
+    <!-- Buckler Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Buckler</defName>
+    <label>баклер</label>
+	<description>Маленький металлический щит, обычно спаренный с рапирой или подобным лёгким клинком. Имея слишком малую площадь для эффективной защиты от снарядов, баклер предназначен для отражения ударов и фиксирования оружия противника в ближнем бою.</description>
+	<techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Buckler_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>	  
+    </graphicData>
+	<costStuffCount>50</costStuffCount>
+	<stuffCategories>
+		  <li>Steeled</li>
+	</stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>	
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MaxHitPoints>145</MaxHitPoints>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <Mass>5</Mass>
+      <Bulk>4</Bulk>
+      <WornBulk>4</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-0.6</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.15</Suppressability>
+      <MeleeCritChance>-0.02</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+  
+    <!-- Riot Shield -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_RiotShield</defName>
+    <label>противоударный щит</label>
+    <description>Лёгкий металлический щит, предназначенный для защиты от метательных снарядов и атак холодным оружием. Недостаточно толстый чтобы остановить пулю или подобный бронебойный снаряд. Почти полностью прикрывает владельца, но ограничивает использование двуручного оружия.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Riot_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Steeled</li>
+    </stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Machining</researchPrerequisite>		
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.21</ArmorRating_Sharp>
+      <Mass>7</Mass>
+      <Bulk>11</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.2</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.25</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.2</AimingAccuracy>
+      <Suppressability>-0.15</Suppressability>
+      <MeleeCritChance>-0.2</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>OutlanderShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>FullHead</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+  
+	<!-- Assault Shield -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_AssaultShield</defName>
+    <label>штурмовой щит</label>
+    <description>Продвинутый щит со встроенными вспомогательными сенсорами, облегчающими работу со щитом. Меньше и легче полноразмерного противопульного щита, этот вариант предназначен для защиты владельца от огнестрельного оружия. Конструкция щита делает упор на скорости и сниженном весе, делая его менее громоздким, чем большинство других щитов.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Assault_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>64</costStuffCount>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>		
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>	
+    <stuffCategories>
+      <li>Steeled</li>
+    </stuffCategories>	  
+    <statBases>
+      <WorkToMake>16000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <Mass>12</Mass>
+      <Bulk>9</Bulk>
+      <WornBulk>8</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.05</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.25</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.15</AimingAccuracy>
+      <Suppressability>-0.45</Suppressability>
+      <MeleeCritChance>-0.2</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>OutlanderShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+        </shieldCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef>  
+  
+</Defs>
+
+
