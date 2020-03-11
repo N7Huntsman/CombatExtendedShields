@@ -14,6 +14,10 @@ Wicker Shield:
 Recipe: 60 x Wood  
 Description: Carried by the Sparabara of the armies of Ancient Persia, the shields are made of wickerwork, offering reasonably good coverage from most simple projectiles without weighing the user down. Unfortunately, their lightweight construction means they offer less protection against the thrust of a spear or sword in hand-to-hand combat.
 
+Aspis:
+Recipe: 60 x Wood, 5 x Steel
+Description: A convex shield made of wood and often covered with a thin sheet of bronze or other metal.
+
 Scutum:  
 Recipe: 60 x Wood, 10 x Steel  
 Description: Famously carried by Roman legionaries, its design reflected its role as a heavy infantryman's shield. Made of layers of wood glued together and covered with canvas or leather, it offered a good compromise between weight and protection. A later design, thick planks and a metal edging give the shield additional strength.
