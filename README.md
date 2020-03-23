@@ -1,6 +1,6 @@
 # CombatExtendedShields
 
-Updated 12/9/2018 for [1.0]  
+Updated 3/23/2020 for [1.0] or [1.1]  
 
 Additional types of shields from a variety of eras. Designed by different cultures for different roles, they allow further specialization of colonists equipped with shields depending upon their role in combat and duty around the colony.
 
@@ -26,7 +26,6 @@ Kite Shield:
 Recipe: 70 x Wood  
 Description: A cavalryman's shield, the kite shield originated in Western Europe, becoming widespread around the 10th Century AD. While one of the few designs of the time that offered good protection the users legs, its length made it awkward for infantry to use. Nevertheless, it was extremely popular, seeing extensive use throughout Europe, and evenutally being introduced to the Holy Land by Norman Crusaders.
 
-
 Riot Shield:  
 Recipe: 60 x Steel  
 Description: Designed for law enforcement and corrections officers, this shield's lightweight metal construction and large size make it ideal for use against crowds and unarmed opponents. However, it offers only limited protection against projectiles and isn't thick enough to stop even the lowest caliber gunfire.
@@ -34,3 +33,7 @@ Description: Designed for law enforcement and corrections officers, this shield'
 Assault Shield:  
 Recipe: 60 x Steel, 4 x Components  
 Description: An advanced composite shield with a suite of integrated sensors, the assault shield was designed for military units likely to find themselves engaged in extremely close-quarters combat. Far smaller than a full-sized ballistic shield, it trades coverage for mobility. Though capable of stopping handgun and rifle rounds, its small size leaves the user very little to hide behind should they find themselves under sustained fire.
+
+Tactical Shield:
+Recipe: 30 x Chemfuel, 70 x Leather/Textile
+Description: A "soft" medium-sized ballistic shield, made from reinforced textile materials rather than metal. Though offering less ballistic protection than the assault shield, it offers wider coverage at a fraction of the weight.
