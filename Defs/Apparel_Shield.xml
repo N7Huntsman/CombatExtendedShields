@@ -351,7 +351,8 @@
     <statBases>
       <WorkToMake>10500</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
-	  <StuffEffectMultiplierArmor>15</StuffEffectMultiplierArmor>
+	  <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>5</ArmorRating_Blunt>	  
       <Mass>7</Mass>
       <Bulk>9</Bulk>
       <WornBulk>8</WornBulk>
@@ -367,7 +368,7 @@
     </equippedStatOffsets>
     <apparel>
       <tags>
-        <li>PaviseShield</li>
+        <li>HeaterShield</li>
       </tags>
     </apparel>
     <modExtensions>
@@ -581,7 +582,9 @@
     <statBases>
       <WorkToMake>16000</WorkToMake>
       <MaxHitPoints>115</MaxHitPoints>
-	  <StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
+	  <StuffEffectMultiplierArmor>10</StuffEffectMultiplierArmor>
+	  <ArmorRating_Sharp>5</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>10</ArmorRating_Blunt>	 	  
       <Mass>5</Mass>
       <Bulk>11</Bulk>
       <WornBulk>8</WornBulk>
