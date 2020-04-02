@@ -8,9 +8,6 @@
       <li>Shields</li>
     </thingCategories>
     <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
       <li Class="CompProperties_Art">
         <nameMaker>NamerArtWeaponMelee</nameMaker>
         <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
@@ -115,8 +112,8 @@
       <MaxHitPoints>80</MaxHitPoints>
 	  <StuffEffectMultiplierArmor>4</StuffEffectMultiplierArmor>
       <Mass>5</Mass>
-      <Bulk>7</Bulk>
-      <WornBulk>5</WornBulk>
+      <Bulk>11</Bulk>
+      <WornBulk>8</WornBulk>
     </statBases>
     <equippedStatOffsets>
       <ReloadSpeed>-0.1</ReloadSpeed>
@@ -232,13 +229,74 @@
       </recipeUsers>
     </recipeMaker>	
     <statBases>
-      <WorkToMake>1000</WorkToMake>
+      <WorkToMake>10000</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
 	  <ArmorRating_Sharp>1.75</ArmorRating_Sharp>
 	  <ArmorRating_Blunt>6</ArmorRating_Blunt>	  
       <Mass>8</Mass>
       <Bulk>8</Bulk>
       <WornBulk>6</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.1</ReloadSpeed>
+      <MeleeHitChance>-1</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.05</AimingAccuracy>
+      <Suppressability>-0.25</Suppressability>
+      <MeleeCritChance>-0.08</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+        </shieldCoverage>
+        <crouchCoverage>
+          <li>Legs</li>
+        </crouchCoverage>
+        <drawAsTall>false</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+
+    <!-- Norse Shield -->
+ <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Norse</defName>
+    <label>norse shield</label>
+    <description>A heavy shield in Norse style, it was famously carried by the vikings on their raids into Western Europe. Designed to protect the user in hand-to-hand combat and against projectiles. Made of thick timber with a heavy iron rim, it is quite sturdy.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Nordic_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <WoodLog>50</WoodLog>
+      <Steel>20</Steel>	  
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>	
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+	  <ArmorRating_Sharp>2</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>7</ArmorRating_Blunt>	  
+      <Mass>8</Mass>
+      <Bulk>6</Bulk>
+      <WornBulk>5</WornBulk>
     </statBases>
     <equippedStatOffsets>
       <ReloadSpeed>-0.1</ReloadSpeed>
@@ -339,7 +397,6 @@
       <texPath>Crusader_Shield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <costStuffCount>70</costStuffCount>
     <costList>
       <WoodLog>70</WoodLog>
     </costList>
@@ -388,6 +445,65 @@
     </modExtensions>
   </ThingDef> 
 
+    <!-- Pavise -->
+  <ThingDef ParentName="ShieldBase_Plus">
+    <defName>Apparel_Pavise</defName>
+    <label>riot shield</label>
+    <description>A large, heavy shield made of rough-hewn planks. Designed to protect archers and crossbowmen from incoming projectiles, it is extremely cumbersome in hand-to-hand combat.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Pavise_Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>	
+      <recipeUsers>
+        <li>FueledSmithy</li>
+        <li>ElectricSmithy</li>		
+      </recipeUsers>
+    </recipeMaker>		
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+	  <StuffEffectMultiplierArmor>25</StuffEffectMultiplierArmor>
+      <Mass>8</Mass>
+      <Bulk>15</Bulk>
+      <WornBulk>10</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <ReloadSpeed>-0.2</ReloadSpeed>
+      <MeleeHitChance>-4</MeleeHitChance>
+      <ShootingAccuracyPawn>-0.25</ShootingAccuracyPawn>
+      <AimingAccuracy>-0.2</AimingAccuracy>
+      <Suppressability>-0.15</Suppressability>
+      <MeleeCritChance>-0.2</MeleeCritChance>
+      <MeleeParryChance>1.0</MeleeParryChance>
+    </equippedStatOffsets>
+    <apparel>
+      <tags>
+        <li>ClassicalShield</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.ShieldDefExtension">
+        <shieldCoverage>
+          <li>Hands</li>
+          <li>Arms</li>
+          <li>Shoulders</li>
+          <li>Torso</li>
+          <li>Neck</li>
+          <li>FullHead</li>
+          <li>Legs</li>		  
+        </shieldCoverage>
+        <drawAsTall>true</drawAsTall>
+      </li>
+    </modExtensions>
+  </ThingDef> 
+
     <!-- Buckler -->
   <ThingDef ParentName="ShieldBase_Plus">
     <defName>Apparel_Buckler</defName>
@@ -410,7 +526,7 @@
       </recipeUsers>
     </recipeMaker>
     <statBases>
-      <WorkToMake>4500</WorkToMake>
+      <WorkToMake>6000</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
 	  <StuffEffectMultiplierArmor>12</StuffEffectMultiplierArmor>
       <Mass>2.5</Mass>
@@ -527,8 +643,8 @@
       <MaxHitPoints>125</MaxHitPoints>
 	  <StuffEffectMultiplierArmor>8</StuffEffectMultiplierArmor>
       <Mass>9</Mass>
-      <Bulk>8</Bulk>
-      <WornBulk>6</WornBulk>
+      <Bulk>10</Bulk>
+      <WornBulk>8</WornBulk>
     </statBases>
     <equippedStatOffsets>
       <ReloadSpeed>-0.05</ReloadSpeed>
@@ -567,7 +683,7 @@
       <texPath>Tactical_Shield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-		<costStuffCount>70</costStuffCount>
+		<costStuffCount>80</costStuffCount>
 		<stuffCategories>
 		  <li>Leathery</li>
 		  <li>Fabric</li>
@@ -582,7 +698,7 @@
       </recipeUsers>
     </recipeMaker>		
     <statBases>
-      <WorkToMake>16000</WorkToMake>
+      <WorkToMake>18000</WorkToMake>
       <MaxHitPoints>115</MaxHitPoints>
 	  <StuffEffectMultiplierArmor>10</StuffEffectMultiplierArmor>
 	  <ArmorRating_Sharp>5</ArmorRating_Sharp>
