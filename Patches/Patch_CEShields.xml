@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- ========== Replace ballistic shield texture. ========== -->
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_BallisticShield"]/graphicData/texPath</xpath>
+		<value>
+		<texPath>Ballistic_Shield</texPath>
+		</value>
+  </Operation>
+
+</Patch>
+
