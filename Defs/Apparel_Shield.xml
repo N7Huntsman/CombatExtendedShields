@@ -2,11 +2,8 @@
 <Defs>
 
 	<!-- Shield Base -->
-  <ThingDef ParentName="ArmorMakeableBase" Name="ShieldBase_Plus" Abstract="true">
+  <ThingDef ParentName="ShieldBase" Name="ShieldBase_Plus" Abstract="true">
     <thingClass>CombatExtended.Apparel_Shield</thingClass>
-    <thingCategories>
-      <li>Shields</li>
-    </thingCategories>
     <comps>
       <li Class="CompProperties_Art">
         <nameMaker>NamerArtWeaponMelee</nameMaker>
@@ -16,17 +13,7 @@
     </comps>
     <inspectorTabs>
       <li>ITab_Art</li>
-    </inspectorTabs>	
-    <apparel>
-      <careIfWornByCorpse>false</careIfWornByCorpse>
-      <bodyPartGroups>
-        <li>LeftArm</li>
-      </bodyPartGroups>
-      <layers>
-        <li>Shield</li>
-      </layers>
-    </apparel>
-    <storedConceptLearnOpportunity>CE_Shields</storedConceptLearnOpportunity>
+    </inspectorTabs>
   </ThingDef>
 
     <!-- Nguni Shield -->
