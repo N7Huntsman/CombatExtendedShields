@@ -448,7 +448,7 @@
     <!-- Pavise -->
   <ThingDef ParentName="ShieldBase_Plus">
     <defName>Apparel_Pavise</defName>
-    <label>riot shield</label>
+    <label>pavise</label>
     <description>A large, heavy shield made of rough-hewn planks. Designed to protect archers and crossbowmen from incoming projectiles, it is extremely cumbersome in hand-to-hand combat.</description>
     <techLevel>Industrial</techLevel>
     <graphicData>
@@ -469,7 +469,7 @@
     <statBases>
       <WorkToMake>12000</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
-	  <StuffEffectMultiplierArmor>25</StuffEffectMultiplierArmor>
+	  <StuffEffectMultiplierArmor>30</StuffEffectMultiplierArmor>
       <Mass>8</Mass>
       <Bulk>15</Bulk>
       <WornBulk>10</WornBulk>
