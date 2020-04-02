@@ -173,7 +173,8 @@
     <statBases>
       <WorkToMake>9400</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
-	  <StuffEffectMultiplierArmor>10</StuffEffectMultiplierArmor>
+	  <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>6</ArmorRating_Blunt>	  
       <Mass>7.6</Mass>
       <Bulk>9</Bulk>
       <WornBulk>8</WornBulk>
@@ -233,7 +234,8 @@
     <statBases>
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
-	  <StuffEffectMultiplierArmor>7</StuffEffectMultiplierArmor>
+	  <ArmorRating_Sharp>1.75</ArmorRating_Sharp>
+	  <ArmorRating_Blunt>6</ArmorRating_Blunt>	  
       <Mass>8</Mass>
       <Bulk>8</Bulk>
       <WornBulk>6</WornBulk>
