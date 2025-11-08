@@ -105,7 +105,7 @@
 			<MeleeParryChance>0.75</MeleeParryChance>
 		</equippedStatOffsets>
 		<apparel>
-			<developmentalStageFilter>Child, Adult</developmentalStageFilter>		
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 			<tags>
 				<li>TribalShield</li>
 			</tags>
@@ -123,11 +123,15 @@
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(0, 0, -0.15)</offset>
+							<rotationOffset>30</rotationOffset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.15)</offset>
 						</dataNorth>
 						<dataSouth>
 							<offset>(0.25, 0, -0.15)</offset>
@@ -187,13 +191,13 @@
 					<shaderTypeDef>CutoutComplex</shaderTypeDef>
 					<parentTagDef>ApparelBody</parentTagDef>
 					<drawData>
-						<scale>0.8</scale>
+						<scale>0.7</scale>
 						<defaultData>
 							<layer>80</layer>
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.2)</offset>
 							<rotationOffset>30</rotationOffset>
 						</dataEast>
 						<dataWest>
@@ -201,10 +205,10 @@
 						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.2)</offset>
 						</dataNorth>
 						<dataSouth>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.25, 0, -0.2)</offset>
 						</dataSouth>
 					</drawData>
 				</li>
@@ -227,7 +231,7 @@
 			<Steel>5</Steel>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>Smithing</researchPrerequisite>		
+			<researchPrerequisite>Smithing</researchPrerequisite>
 			<recipeUsers>
 			<li>FueledSmithy</li>
 			<li>ElectricSmithy</li>		
@@ -270,7 +274,11 @@
 						<dataEast>
 							<layer>-5</layer>
 							<offset>(0, 0, -0.1)</offset>
+							<rotationOffset>30</rotationOffset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
 							<offset>(0.15, 0, -0.1)</offset>
@@ -335,20 +343,24 @@
 				<shaderTypeDef>CutoutComplex</shaderTypeDef>
 				<parentTagDef>ApparelBody</parentTagDef>
 				<drawData>
-					<scale>0.8</scale>
+					<scale>0.6</scale>
 					<defaultData>
 						<layer>80</layer>
 					</defaultData>
 					<dataEast>
 						<layer>-5</layer>
-						<offset>(0, 0, -0.1)</offset>
+						<offset>(0, 0, -0.2)</offset>
+						<rotationOffset>30</rotationOffset>
 					</dataEast>
+					<dataWest>
+						<rotationOffset>-30</rotationOffset>
+					</dataWest>
 					<dataNorth>
 						<layer>-5</layer>
-						<offset>(0.15, 0, -0.1)</offset>
+						<offset>(0.15, 0, -0.2)</offset>
 					</dataNorth>
 					<dataSouth>
-						<offset>(0.25, 0, -0.15)</offset>
+						<offset>(0.25, 0, -0.2)</offset>
 					</dataSouth>
 				</drawData>
 			</li>
@@ -371,17 +383,17 @@
 			<Steel>20</Steel>		
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>Smithing</researchPrerequisite>		
+			<researchPrerequisite>Smithing</researchPrerequisite>
 			<recipeUsers>
 			<li>FueledSmithy</li>
-			<li>ElectricSmithy</li>		
+			<li>ElectricSmithy</li>
 			</recipeUsers>
 		</recipeMaker>	
 		<statBases>
 			<WorkToMake>11000</WorkToMake>
 			<MaxHitPoints>100</MaxHitPoints>
 			<ArmorRating_Sharp>2</ArmorRating_Sharp>
-			<ArmorRating_Blunt>7</ArmorRating_Blunt>		
+			<ArmorRating_Blunt>7</ArmorRating_Blunt>
 			<Mass>8</Mass>
 			<Bulk>6</Bulk>
 			<WornBulk>5</WornBulk>
@@ -414,7 +426,11 @@
 						<dataEast>
 							<layer>-5</layer>
 							<offset>(0, 0, -0.1)</offset>
+							<rotationOffset>30</rotationOffset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
 							<offset>(0.15, 0, -0.1)</offset>
@@ -429,7 +445,7 @@
 	</ThingDef> 
 	
 	<!-- Kite Shield -->
-	<ThingDef Name="KiteShield" ParentName="ShieldBase_Plus_Medium_NoLegs">
+	<ThingDef ParentName="ShieldBase_Plus_Medium_NoLegs">
 		<defName>Apparel_KiteShield</defName>
 		<label>kite shield</label>
 		<description>A heavy shield that covers the legs made popular by the Normans. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
@@ -446,7 +462,7 @@
 			<researchPrerequisite>Smithing</researchPrerequisite>		
 			<recipeUsers>
 			<li>FueledSmithy</li>
-			<li>ElectricSmithy</li>		
+			<li>ElectricSmithy</li>
 			</recipeUsers>
 		</recipeMaker>		
 		<statBases>
@@ -478,41 +494,33 @@
 					<shaderTypeDef>CutoutComplex</shaderTypeDef>
 					<parentTagDef>ApparelBody</parentTagDef>
 					<drawData>
-						<scale>0.8</scale>
+						<scale>0.7</scale>
 						<defaultData>
 							<layer>80</layer>
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.25)</offset>
+							<rotationOffset>30</rotationOffset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.25)</offset>
 						</dataNorth>
 						<dataSouth>
-							<offset>(0.25, 0, -0.15)</offset>
+							<offset>(0.25, 0, -0.2)</offset>
 						</dataSouth>
 					</drawData>
 				</li>
 			</renderNodeProperties>
 		</apparel>
-		<modExtensions>
-			<li Class="CombatExtended.ShieldDefExtension">
-			<shieldCoverage>
-				<li>Hands</li>
-				<li>Arms</li>
-				<li>Shoulders</li>
-				<li>Torso</li>
-				<li>Neck</li>
-				<li>Legs</li>			
-			</shieldCoverage>
-			</li>
-		</modExtensions>
 	</ThingDef>
 
 	<!-- Crusader Kite Shield -->
-	<ThingDef ParentName="KiteShield">
+	<ThingDef ParentName="ShieldBase_Plus_Medium_NoLegs">
 		<defName>Apparel_CrusaderShield</defName>
 		<label>crusader's kite shield</label>
 		<description>A heavy shield that covers the legs made popular by the Normans, bearing the crimson symbol of the Crusaders. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
@@ -520,11 +528,39 @@
 			<texPath>Things/Shields/Crusader_Shield</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<costStuffCount>70</costStuffCount>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<recipeMaker>
+			<researchPrerequisite>Smithing</researchPrerequisite>
+			<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+			</recipeUsers>
+		</recipeMaker>		
+		<statBases>
+			<WorkToMake>10500</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<StuffEffectMultiplierArmor>15</StuffEffectMultiplierArmor>
+			<Mass>7</Mass>
+			<Bulk>9</Bulk>
+			<WornBulk>8</WornBulk>
+		</statBases>
+		<equippedStatOffsets>
+			<ReloadSpeed>-0.1</ReloadSpeed>
+			<MeleeHitChance>-1</MeleeHitChance>
+			<ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+			<AimingAccuracy>-0.05</AimingAccuracy>
+			<Suppressability>-0.25</Suppressability>
+			<MeleeCritChance>-0.08</MeleeCritChance>
+			<MeleeParryChance>1.0</MeleeParryChance>
+		</equippedStatOffsets>		
 		<apparel>
 			<tags>
 				<li>HeaterShield</li>
 			</tags>
-			<renderNodeProperties>
+			<renderNodeProperties inherit="false">
 				<li>
 					<nodeClass>CombatExtended.PawnRenderNode_Apparel</nodeClass>
 					<workerClass>CombatExtended.PawnRenderNodeWorker_Drafted</workerClass>
@@ -532,20 +568,24 @@
 					<shaderTypeDef>CutoutComplex</shaderTypeDef>
 					<parentTagDef>ApparelBody</parentTagDef>
 					<drawData>
-						<scale>0.8</scale>
+						<scale>0.7</scale>
 						<defaultData>
 							<layer>80</layer>
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.25)</offset>
+							<rotationOffset>30</rotationOffset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.25)</offset>
 						</dataNorth>
 						<dataSouth>
-							<offset>(0.25, 0, -0.15)</offset>
+							<offset>(0.25, 0, -0.2)</offset>
 						</dataSouth>
 					</drawData>
 				</li>
@@ -568,7 +608,7 @@
 			<li>Woody</li>
 		</stuffCategories>
 		<recipeMaker>
-			<researchPrerequisite>Smithing</researchPrerequisite>	
+			<researchPrerequisite>Smithing</researchPrerequisite>
 			<recipeUsers>
 			<li>FueledSmithy</li>
 			<li>ElectricSmithy</li>		
@@ -684,14 +724,17 @@
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(-0.1, 0, -0.10)</offset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.10)</offset>
 						</dataNorth>
 						<dataSouth>
-							<offset>(0.25, 0, -0.15)</offset>
+							<offset>(0.25, 0, -0.10)</offset>
 						</dataSouth>
 					</drawData>
 				</li>
@@ -724,7 +767,7 @@
 		<recipeMaker>
 			<researchPrerequisite>Machining</researchPrerequisite>		
 			<recipeUsers>
-			<li>TableMachining</li>
+				<li>TableMachining</li>
 			</recipeUsers>
 		</recipeMaker>		
 		<statBases>
@@ -756,24 +799,28 @@
 					<shaderTypeDef>CutoutComplex</shaderTypeDef>
 					<parentTagDef>ApparelBody</parentTagDef>
 					<drawData>
-						<scale>0.8</scale>
+						<scale>0.7</scale>
 						<defaultData>
 							<layer>80</layer>
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(0, 0, -0.15)</offset>
+							<rotationOffset>30</rotationOffset>							
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.15, 0, -0.15)</offset>
 						</dataNorth>
 						<dataSouth>
 							<offset>(0.25, 0, -0.15)</offset>
 						</dataSouth>
 					</drawData>
 				</li>
-			</renderNodeProperties>				
+			</renderNodeProperties>
 		</apparel>
 	</ThingDef>
 	
@@ -792,7 +839,7 @@
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>Machining</researchPrerequisite>		
+			<researchPrerequisite>Machining</researchPrerequisite>
 			<recipeUsers>
 			<li>TableMachining</li>
 			</recipeUsers>
@@ -835,7 +882,7 @@
 						</defaultData>
 						<dataEast>
 							<layer>-5</layer>
-							<offset>(0, 0, -0.1)</offset>
+							<offset>(0, 0, -0.15)</offset>
 							<rotationOffset>25</rotationOffset>
 						</dataEast>
 						<dataWest>
@@ -843,10 +890,10 @@
 						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
-							<offset>(0.15, 0, -0.1)</offset>
+							<offset>(0.2, 0, -0.15)</offset>
 						</dataNorth>
 						<dataSouth>
-							<offset>(0.25, 0, -0.15)</offset>
+							<offset>(0.2, 0, -0.15)</offset>
 						</dataSouth>
 					</drawData>
 				</li>
@@ -880,10 +927,10 @@
 				<li>Fabric</li>
 			</stuffCategories>
 			<costList>
-				<Chemfuel>30</Chemfuel>			
+				<Chemfuel>30</Chemfuel>
 			</costList>	
 		<recipeMaker>
-			<researchPrerequisite>Machining</researchPrerequisite>		
+			<researchPrerequisite>Machining</researchPrerequisite>
 			<recipeUsers>
 			<li>TableMachining</li>
 			</recipeUsers>
@@ -893,7 +940,7 @@
 			<MaxHitPoints>115</MaxHitPoints>
 			<StuffEffectMultiplierArmor>10</StuffEffectMultiplierArmor>
 			<ArmorRating_Sharp>5</ArmorRating_Sharp>
-			<ArmorRating_Blunt>10</ArmorRating_Blunt>	 		
+			<ArmorRating_Blunt>10</ArmorRating_Blunt>
 			<Mass>5</Mass>
 			<Bulk>11</Bulk>
 			<WornBulk>8</WornBulk>
@@ -927,6 +974,9 @@
 							<layer>-5</layer>
 							<offset>(0, 0, -0.1)</offset>
 						</dataEast>
+						<dataWest>
+							<rotationOffset>-30</rotationOffset>
+						</dataWest>
 						<dataNorth>
 							<layer>-5</layer>
 							<offset>(0.15, 0, -0.1)</offset>
@@ -936,7 +986,7 @@
 						</dataSouth>
 					</drawData>
 				</li>
-			</renderNodeProperties>			
+			</renderNodeProperties>
 		</apparel>
 	</ThingDef> 
 
